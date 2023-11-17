@@ -1,4 +1,20 @@
 import _ from 'lodash';
-import { todo } from './todo.js';
+import { todo } from './todo.js'; // Assuming you've renamed 'todo' to 'Todo' 
+import { addTask, clearTasks, deleteTask, loadTasks, tasks } from './tasks.js';
 
-const task = new todo("Go on a run", "You have to go on a run today", "May 1st, 2019", "High", "Working on");
+loadTasks();
+
+document.getElementById('button-add-todo').addEventListener('click', function () {
+    addTask("me", "me", "me", "me", "me");
+});
+
+function addDeleteButtonEventListeners() {
+    document.querySelectorAll('.delete-button').forEach(button => {
+        button.addEventListener('click', function () {
+            const taskId = parseInt(this.getAttribute('data-task-id'));
+            deleteTask(taskId);
+        });
+    });
+}
+
+export { deleteTask, addDeleteButtonEventListeners }
