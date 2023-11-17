@@ -1,0 +1,8 @@
+#main-container {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  width: 500px;
+  flex-direction: column;
+  justify-content: center;
+}
