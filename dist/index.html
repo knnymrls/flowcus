@@ -8,12 +8,49 @@
 </head>
 
 <body>
+    <div id="modal-add-todo" class="modal-add-todo">
+        <!-- Modal content -->
+        <div class="modal-add-todo-content">
+            <div class="modal-add-todo-close" id="modal-add-todo-close">&times;</div>
+            <form id="form-add-todo">
+                <fieldset>
+                    <label for="name">Name</label>
+                    <input type="text" id="add-todo-name" placeholder="Name" required>
+                </fieldset>
+                <fieldset>
+                    <label for="description">Description</label>
+                    <input type="text" id="add-todo-description" placeholder="Description">
+                </fieldset>
+                <fieldset>
+                    <label for="due-date"></label>
+                    <input type="date" id="add-todo-dueDate" placeholder="date">
+                </fieldset>
+                <fieldset>
+                    <input type="radio" name="priority" id="add-todo-priority" value="High">
+                    <label for="high">High</label>
+                    <input type="radio" name="priority" id="add-todo-priority" value="Medium">
+                    <label for="medium">Medium</label>
+                    <input type="radio" name="priority" id="add-todo-priority" value="Low">
+                    <label for="low">Low</label>
+                </fieldset>
+                <fieldset>
+                    <input type="radio" name="state" id="add-todo-state" value="Todo">
+                    <label for="Todo">Todo</label>
+                    <input type="radio" name="state" id="add-todo-state" value="Doing">
+                    <label for="Doing">Doing</label>
+                    <input type="radio" name="state" id="add-todo-state" value="Done">
+                    <label for="Done">Done</label>
+                </fieldset>
+                <button id="form-add-todo-submit" type="submit">Add Todo</button>
+            </form>
+        </div>
+    </div>
     <div class="main-container">
         <div id="tasksContainer">
         </div>
         <button id="button-add-todo">Add Todo</button>
     </div>
-    <script src="main.js"></script>
+    <script src="main.js" defer></script>
 </body>
 
 </html>
