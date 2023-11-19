@@ -1,14 +1,14 @@
-function formatDueDate(dueDate) {
-    if (!dueDate) {
-        return 'No Due Date';
+function formatdue(due) {
+    if (!due) {
+        return '';
     }
 
-    const dateObject = new Date(dueDate);
+    const dateObject = new Date(due);
     return dateObject.toLocaleDateString('en-US', {
-        month: 'long',
+        month: 'short',
         day: 'numeric',
         year: 'numeric'
     });
 }
 
-export { formatDueDate }
+export { formatdue }
