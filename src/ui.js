@@ -4,12 +4,15 @@ import { deleteTask } from "./tasks";
 
 // Function to update the display with tasks
 function updateDisplay() {
-    const tasksContainer = document.getElementById('tasksContainer');
+    const tasksContainer = document.querySelector('.main-tasks-container');
     tasksContainer.innerHTML = '';
 
     tasks.forEach(task => {
         tasksContainer.appendChild(createTaskElement(task));
     });
+
+    tasksContainer.innerHTML += '<button id="add-todo-button">ADD TODO</button>';
+    document.getElementById('add-todo-button').addEventListener('click', openAddTodoModal);
 
     addAllButtonEventListeners();
 }
@@ -19,13 +22,18 @@ function createTaskElement(task) {
     const taskElement = document.createElement('div');
     taskElement.innerHTML = `
     <div class="card ${task.id}">
+
     <div class="card-main-info">
         <p class="card-name">${task.name}</h3>
         <p class="card-date">${formatdue(task.due)}</p>
     </div>
-        <p>Priority: ${task.priority}</p>
-        <button class="delete-button" data-task-id="${task.id}">Delete</button>
-        <button class="edit-button" data-task-id="${task.id}"></button>
+    <div class="card-sup-info">
+        <p>${task.priority}</p>
+        <div class="card-accessors">
+            <button class="delete-button" data-task-id="${task.id}">Delete</button>
+            <button class="edit-button" data-task-id="${task.id}">Edit</button>
+        </div>
+    </div>
     </div>
     `;
     return taskElement;
@@ -86,11 +94,11 @@ function populateEditModal(task) {
 // Initialize event listeners
 function initializeEventListeners() {
     // Add todo button event listener
-    document.getElementById('button-add-todo').addEventListener('click', openAddTodoModal);
+    document.getElementById('add-todo-button').addEventListener('click', openAddTodoModal);
 
     // Close modal events
-    document.getElementById('close-modal').addEventListener('click', closeAddTodoModal);
-    document.getElementById('close-modal').addEventListener('click', closeEditModal);
+    document.getElementById('close-add-modal').addEventListener('click', closeAddTodoModal);
+    document.getElementById('close-edit-modal').addEventListener('click', closeEditModal);
 
     // Form submit event listeners
     document.getElementById('add-form').addEventListener('submit', handleAddTodoSubmit);

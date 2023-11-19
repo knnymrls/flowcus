@@ -8,11 +8,24 @@
 </head>
 
 <body>
-    <h1>flowcus</h1>
-    <!-- Edit Modal -->
+    <div class="grid-container">
+        <nav class="nav-top"></nav>
+        <div class="side-bar">All TODOS</div>
+        <div class="main-container">
+            <div class="main-tasks-container" id="main-tasks-container">
+                <div class="main-tasks-container-todo">
+                    <button id="add-todo-button">ADD TODO</button>
+                </div>
+                <div class="main-tasks-container doing"></div>
+                <div class="main-tasks-container done"></div>
+            </div>
+
+        </div>
+    </div>
+
     <div id="edit-modal" class="edit-modal">
         <div class="edit-modal-content">
-            <span class="close-modal" id="close-modal">&times;</span>
+            <span class="close-edit-modal" id="close-edit-modal">&times;</span>
             <form id="edit-form" class="edit-form">
                 <fieldset class="name">
                     <input type="hidden" id="edit-taskId">
@@ -52,7 +65,7 @@
     <div id="add-modal" class="add-modal">
         <!-- Modal content -->
         <div class="add-modal-content">
-            <div class="close-modal" id="close-modal">&times;</div>
+            <div class="close-add-modal" id="close-add-modal">&times;</div>
             <form id="add-form">
                 <fieldset>
                     <label for="name">Name</label>
@@ -85,12 +98,6 @@
                 <button id="form-add-todo-submit" type="submit">Add Todo</button>
             </form>
         </div>
-    </div>
-
-    <div class="main-container">
-        <div id="tasksContainer">
-        </div>
-        <button id="button-add-todo">Add Todo</button>
     </div>
     <script src="main.js" defer></script>
 </body>
