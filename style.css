@@ -1,5 +1,5 @@
 :root {
-  --background-color: #eee5e9;
+  --background-color: #ffffff;
   --primary-color: #7353ba;
   --secondary-color: #b19cd2;
   --text-color: #181818;
@@ -16,7 +16,8 @@ body {
   grid-template-areas:
     "navbar navbar"
     "sidebar main";
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   margin: 0px;
   height: 100vh; /* Full viewport height */
 }
@@ -40,7 +41,6 @@ nav {
   background-color: var(--background-color);
   overflow-y: scroll;
 }
-
 
 .main-tasks-container {
   display: flex;
@@ -110,7 +110,7 @@ nav {
   gap: 24px;
   align-self: stretch;
   border-radius: 9px;
-  background: var(--Background, #eee5e9);
+  background: var(--Background);
   box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.25);
 }
 
