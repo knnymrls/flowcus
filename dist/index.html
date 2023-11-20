@@ -8,15 +8,23 @@
 </head>
 
 <body>
-    <div>
-        <input type="text" id="new-todo" placeholder="Add a new to-do...">
-        <button id="add-todo-button">Add To-Do</button>
-    </div>
-    
-    <div>
-        <input type="text" id="new-project-name" placeholder="New project name...">
-        <button id="create-project-button">Create Project</button>
-    </div>    
+    <nav>
+        <div class="add">
+            <div>
+                <input type="text" id="new-todo" placeholder="Add a new to-do...">
+                <button id="add-todo-button">Add To-Do</button>
+            </div>
+            
+            <div>
+                <input type="text" id="new-project-name" placeholder="New project name...">
+                <button id="create-project-button">Create Project</button>
+            </div>   
+        </div>
+        <h1>
+            flowcus
+        </h1>
+    </nav>
+
 
     <div id="project-container" class="draggable-container">
         <!-- Projects will be added here -->
@@ -26,7 +34,7 @@
         <!-- Cards will be added here -->
     </div>
 
-    <script src="main.js" defer></script>
+    <script src="main.js"></script>
 </body>
 
 </html>
