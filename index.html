@@ -9,16 +9,17 @@
 
 <body>
     <nav>
-        <div class="add">
-            <div>
-                <input type="text" id="new-todo" placeholder="Add a new to-do...">
-                <button id="add-todo-button">Add To-Do</button>
-            </div>
-            
-            <div>
-                <input type="text" id="new-project-name" placeholder="New project name...">
-                <button id="create-project-button">Create Project</button>
-            </div>   
+        <form id="todo-form">
+            <label>Name:</label>
+            <input type="text" id="new-todo" placeholder="Add a new to-do...">
+            <label>Date:</label>
+            <input type="date" id="new-date-todo" placeholder="">
+            <input id="submit" type="submit" placeholder="Add todo">
+        </form>
+        <div>
+            <input type="text" id="new-project-name" placeholder="New project name...">
+            <button id="create-project-button">Create Project</button>
+        </div>
         </div>
         <h1>
             flowcus
